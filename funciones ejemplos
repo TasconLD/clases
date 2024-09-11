@@ -11,3 +11,19 @@ def sumar_enteros():
 print("Fundamentos de Programacion")
 saludar()
 sumar_enteros()
+
+*********************************************************************************************************************
+
+#declaracion de la funcion
+def saludar():
+    print("Hola, bienvenidos a las funciones")
+def sumar_enteros():
+    a = int(input("Numero 1: "))
+    b = int(input("Numero 2: "))
+    c = a + b
+    print("La suma de ", a , " + " , b , " es ", c)
+    
+#Programa principal
+print("Fundamentos de Programacion")
+saludar()
+sumar_enteros()
