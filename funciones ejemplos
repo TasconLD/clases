@@ -1,0 +1,13 @@
+#declaracion de la funcion
+def saludar():
+    print("Hola, bienvenidos a las funciones")
+def sumar_enteros():
+    a = 5
+    b = 10
+    c = a + b
+    print("La suma de ", a , " + " , b , " es ", c)
+    
+#Programa principal
+print("Fundamentos de Programacion")
+saludar()
+sumar_enteros()
