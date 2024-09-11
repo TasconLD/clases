@@ -1,0 +1,63 @@
+#programa: imc.py
+#proposito: calcular el IMC y estado de obesidad de una persona
+#programador: Yo
+#Fecha: 10/09/2024
+
+#Delcaracion y Inicializacion de variables
+peso = 0.0
+estatura = 0.0
+imc = 0.0
+estado = ""
+
+#Entrada de datos 
+peso = float(input("Peso: "))
+estatura = float(input("Estatura: "))
+
+imc = (peso/ pow(estatura,2),1)
+
+if imc < 18.5:
+    estado = "Bajo Peso"
+elif(imc >= 18.5 and imc <= 24.9):
+    estado = "Peso Normal"
+elif (imc >=25 and imc <=29.9):
+    estado = "Sobrepeso"
+elif (imc >30 and imc <=34.9):
+    estado = "Obesidad Tpo 1"
+elif (imc >=35 and imc <=40):
+    estado = "Obesidad tipo 2"
+else:
+    estado = "Obesidad tipo 3"
+
+print("IMC: ",imc)
+print("Estado de obesidad: ", estado)
+
+
+
+#Funciones
+
+Bloque de codigo que realiza una tarea especifica
+
+#Ventajas
+*Realiza una tarea especifica
++Reutiliza el codigo/proceso
+*Organiza de una mejor manera al programa/algoritmo
+*Reduce la complejidad de la solucion
+
+#ejemplo
+
+def calcular_circuito(V,r1, r2, r3):
+    Rt = r1 + r2 + r3
+    I: V/Rt
+    P: V*I
+    return Rt, I, P
+
+V = float(input("Voltaje: "))
+r1 = float(input("Primer resistencia: "))
+r2 = float(input("Segunda resistencia: "))
+r3 = float(input("Tercer resistencia: "))
+
+Rt, I, P = calcular_circuito(V, r1, r2, r3)
+
+print("La resistencia total es: ", Rt)
+print("La corriente es: ", I)
+print("La potencia es: ", P)
