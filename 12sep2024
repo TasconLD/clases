@@ -1,2 +1,19 @@
 pythontutor.com
 uso del global en las funciones
+
+---funciones en pseint
+SubProceso c <- sumar (a ,b)
+	definir c Como Entero;
+	c <- a + b	
+FinSubProceso
+
+SubProceso saludar
+	Escribir "Hola bienvenidos"
+FinSubProceso
+
+Proceso sumar_numeros
+	saludar()
+	Escribir sumar(2, 5)
+	
+FinProceso
+	
