@@ -1,7 +1,8 @@
 pythontutor.com
 uso del global en las funciones
+___________________________________________________________
+FUNCIONES CON PSEINT
 
----funciones en pseint
 SubProceso c <- sumar (a ,b)
 	definir c Como Entero;
 	c <- a + b	
@@ -16,4 +17,44 @@ Proceso sumar_numeros
 	Escribir sumar(2, 5)
 	
 FinProceso
-	
+______________________________________________________________
+#IMC CON FUNCIONES
+
+import math
+#declara las funciones
+def determinar_estado_obesidad(imc):
+    if imc < 18.5:
+        estado = "Bajo Peso"
+    elif(imc >= 18.5 and imc <= 24.9):
+        estado = "Peso Normal"
+    elif (imc >=25 and imc <=29.9):
+        estado = "Sobrepeso"
+    elif (imc >30 and imc <=34.9):
+        estado = "Obesidad Tpo 1"
+    elif (imc >=35 and imc <=40):
+        estado = "Obesidad tipo 2"
+    else:
+        estado = "Obesidad tipo 3"
+    return estado
+def calcular_imc(peso,altura):
+    return round(peso/pow(estatura,2),1)
+def capturar_datos():
+    global peso, estatura
+    peso = float(input("Peso: "))
+    estatura = float(input("Estatura: "))
+def imprimir_resultados(imc, estado):
+    print("IMC: ", imc)
+    print("Estado de obesidad: ", estado)
+def main():
+    global peso, altura
+    #Entrada de datos 
+    capturar_datos()
+    imc = calcular_imc(peso,estatura)
+    estado = determinar_estado_obesidad(imc)
+    imprimir_resultados(imc, estado)
+#Declaracion y inicializacion de variables
+peso = 0.0
+estatura = 0.0
+imc = 0.0
+estado = ""
+main()
