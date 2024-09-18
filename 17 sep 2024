@@ -1,0 +1,71 @@
+--------#Estructura repetitiva (ciclos-interaciones-loop)---------
+
+#PARA 
+Repite un numero determinado de veces
+
+#MIENTRAS
+Repite mientras se cumple una condicion 
+
+#REPITA (en python no existe)
+
+PARA:
+Para vc = vi; vc <= vf; vca
+  """"""
+FinPara
+
+vc: variable de control
+vi: valor inicial
+vf: valor final
+vca: valor de cambio
+
+Para i = 1; i <= 5: i = i + 1
+  """"""
+FinPara 
+
+___________________________________________
+PSEINT
+
+Proceso ciclo_para
+	Definir i Como Entero;
+	para i <- 1 hasta 10 con paso 2 Hacer
+		Escribir "Hola #", i;
+	FinPara
+FinProceso
+____________________________________________
+Proceso ciclo_para
+	Definir i Como Entero;
+	para i <- 10 hasta 1 con paso -1 Hacer
+		Escribir "Hola #", i;
+	FinPara
+FinProceso
+____________________________________________
+Proceso ciclo_para
+	Definir i, limite Como Entero;
+	Escribir "�Cual es el limite?";
+	Leer limite;
+	para i <- 1 hasta limite con paso 1 Hacer
+		Escribir "Hola #", i;
+	FinPara
+FinProceso
+_____________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
