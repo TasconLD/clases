@@ -41,7 +41,7 @@ FinProceso
 ____________________________________________
 Proceso ciclo_para
 	Definir i, limite Como Entero;
-	Escribir "�Cual es el limite?";
+	Escribir "Cual es el limite?";
 	Leer limite;
 	para i <- 1 hasta limite con paso 1 Hacer
 		Escribir "Hola #", i;
@@ -49,12 +49,162 @@ Proceso ciclo_para
 FinProceso
 _____________________________________________
 
+Acumulador: Operador para hacer sumatorias. Es una variable que guarda el valor de una variable
+	acu = acu + variable
+Ej: 
+	total = total + dinero
+
+_________________________________________________________________
+ANALISIS(cantidad de dinero reunido)
+Datos de entrada
+*dinero de cada persona: dinero(entero)
+*cantidad de personas: cant_personas(entero)
+
+Datos de salida 
+*cantidad de dinero de todos: total(entero)
+*promedio de dinero: promedio(real)
+
+Proceso
+	total = total + dinero 
+	promedio = total/cant_personas
+
+################## PSEINT ##################
+
+Proceso promedio_dinero
+	Definir dinero, total, i, cant_personas Como Entero;
+	Definir promedio Como Real;
+	Escribir "Cantidad de personas: ";
+	Leer cant_personas;
+	total <- 0; //Inicializar la variable
+	Para i <- 1 hasta cant_personas Con Paso 1 Hacer
+		Escribir "Persona ", i, " de ", cant_personas;
+		Escribir "Cantidad de Dinero ";
+		Leer dinero;
+		total <- total + dinero; //Acumulador
+	FinPara
+	promedio <- total / cant_personas;
+	Escribir "Total de dinero entre todos: ", total;
+	Escribir "Promedio de dinero: ", promedio;
+FinProceso
+____________________________________
+ANALISIS (Nota final y promedio del grupo)
+Datos de entrada
+*cantidad de estudiantes: num_estudiantes(entero)
+*nota del examen: examen (real)
+*nota del laboratorio: lab(real)
+*nota del quiz: quiz(real)Proceso promedio_notas_en_grupo
+	Definir i, num_estudiantes Como Entero;
+	Definir examen, lab, quiz, suma_notas Como Real;
+	Definir promedio, nota_final Como Real;
+	suma_notas <- 0;
+	Escribir "Cantidad de estudiantes: ";
+	Leer num_estudiantes;
+	Para i <- 1 hasta num_estudiantes Con Paso 1 Hacer
+		Escribir "Examen: ";
+		Leer examen;
+		Escribir "Laboratorio: ";
+		Leer lab;
+		Escribir "Quiz: ";
+		Leer quiz;
+		nota_final <- (examne*0.5) + (lab*0.3) + (quiz*0.1);
+		Escribir "Nota final de estudiante: ", nota_final;
+		suma_notas <- suma_notas + nota_final;
+		Si nota_final >= 3.0 Entonces
+			Escribir "Gano la materia";
+		Sino
+			Escribir "Perdio la materia";
+		FinSi
+	FinPara
+	promedio <- suma_notas / num_estudiantes;
+	Escribir "Promedio del Grupo: ", promedio;
+FinProceso
 
 
+Datos de salida
+*nota definitiva:
+*nota final:
+*mensaje: "Gano" (nota-final >= 3.0) 
+	"Perdio"
+*promedio: promedio (real)
 
+Proceso
+	nota-final = (examen*05) + (lab*03) + (quiz*01)
+	promedio = suma_notas/num_estudiantes
+	suma_notas = suma_notas + nota_final
 
+##### PSEINT ######
 
+Proceso promedio_notas_en_grupo
+	Definir i, num_estudiantes Como Entero;
+	Definir examen, lab, quiz, suma_notas Como Real;
+	Definir promedio, nota_final Como Real;
+	suma_notas <- 0;
+	Escribir "Cantidad de estudiantes: ";
+	Leer num_estudiantes;
+	Para i <- 1 hasta num_estudiantes Con Paso 1 Hacer
+		Escribir "Estudiante  # " , i , " de ", num_estudiantes;
+		Escribir "Examen: ";
+		Leer examen;
+		Escribir "Laboratorio: ";
+		Leer lab;
+		Escribir "Quiz: ";
+		Leer quiz;
+		nota_final <- (examen*0.5) + (lab*0.4) + (quiz*0.1);
+		Escribir "Nota final de estudiante: ", nota_final;
+		suma_notas <- suma_notas + nota_final;
+		Si nota_final >= 3.0 Entonces
+			Escribir "Gano la materia";
+		Sino
+			Escribir "Perdio la materia";
+		FinSi
+	FinPara
+	promedio <- suma_notas / num_estudiantes;
+	Escribir "Promedio del Grupo: ", promedio;
+FinProceso
 
+######pasar codigo a python y distribuirlo en funciones#####
+
+_____________________________________________________________________
+ANALISIS(ciclo promedio del peso y edad de estudiantes)
+Datos de entrada
+*peso del estudiante: peso (real)
+*edad del estudiante: edad (real)
+
+Datos de salida
+*promedio de peso: promedio_peso(real)
+*promedio de edad: promedio_edad(real)
+
+Proceso
+	suma_peso = suma_peso + peso //acumulador
+	suma_edad = suma_edad + edad
+	promedio_peso = suma_peso / num_estudiantes
+	promedio_edad = suma_edad / num_estudiantes
+
+######### PSEINT #######
+
+Proceso ciclo_promedioEdadyPeso
+	Definir peso, edad, suma_edad, suma_peso Como Real;
+	Definir promedio_peso, promedio_edad Como Real;
+	Definir i, num_estudiantes Como Entero;
+	suma_edad <- 0;
+	suma_peso <- 0;
+	Escribir "Cantidad de estudiantes: ";
+	Leer num_estudiantes;
+	Para i <- 1 hasta num_estudiantes Con Paso 1 Hacer
+		Escribir "Estudiante # " , i, " de " ,num_estudiantes;
+		Escribir "Peso: ";
+		Leer peso;
+		Escribir "Edad: ";
+		Leer edad;
+		suma_edad <- suma_edad + edad;
+		suma_peso <- suma_peso + peso;
+	FinPara
+	promedio_edad <- suma_edad / num_estudiantes;
+	promedio_peso <- suma_peso / num_estudiantes;
+	Escribir "El promedio de edad: ", promedio_edad;
+	Escribir "El promedio de peso: ", promedio_peso;
+FinProceso
+_____________________________________________________________________________
 
 
 
