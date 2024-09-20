@@ -1,0 +1,24 @@
+CICLO FOR EN PYTHON
+
+for i in range (vi, vf, vca):
+
+  for in range(1,5+1,1):
+              (4,11,2) Arranque en 4 hasta 11 de 2 en 2
+              (6) Arranque en 0 cuando se da un solo valor
+5+1 se usa porque excluye el valor final
+__________________________________________________________
+*******PYTHON********
+
+for i in range(1,5+1,1):
+  print("Hola", i)
+___________________________________________________________
+#Programa: dinero.py
+#Objetivo: Sumar la cantidad de dinero
+total = 0
+canin range(1,cantidad_personas+1):
+  print("Personas #", i, " de ", cantidad_personas
+  dinero = int(input("Cantidad: "))
+  total = tidad_personas = int(input("Cantidad personas: "))
+for i total + dinero 
+print("Total dinero: ", total
+__________________________________________________________
