@@ -1,6 +1,6 @@
 #programa: total_dinero.py
 #proposito: calcular el total de dinero entre todas las personas
-#ejercicio con ciclo For
+#ejercicio con ciclo For en python 
 
 
 plata_total = 0 #Inicializacion
@@ -14,15 +14,163 @@ ______________________________________________________________________________
 
 MIENTRAS: Repite siempre que una condicion sea verdadera
 
+Sirve para cuando no sabemos cuantas veces tenemos que repetir una accion.
+
 ****PSEINT***
 
 Mientras condicion hacer
   """"
 FinMientras
   """"
-____________________________________________________
+
 *******PYTHON*****
 
 While condicion: 
   """"
 ____________________________________________________
+****PSEINT****
+
+Proceso ejercicio_con_while
+	definir i, plata_total, cantidad_dinero, cantidad_estudiantes Como Entero;
+	Definir eleccion Como Caracter;
+	plata_total <- 0; //Inicializacion
+	cantidad_estudiantes <- 0;
+	eleccion <- 'si';
+	Mientras eleccion = 'si' Hacer
+		cantidad_estudiantes <- cantidad_estudiantes + 1;
+		Escribir  "Plata que tiene (" ,cantidad_estudiantes, ")";
+		leer cantidad_dinero;
+		plata_total <- plata_total + cantidad_dinero;
+		Escribir  "Desea continuar? [si - no]: ";
+		Leer eleccion;
+	FinMientras
+	Escribir  "Total dinero entre todos: ", plata_total;
+FinProceso
+
+***
+
+Proceso ejercicio_mientras_distinto_de_cero
+	definir dinero, total Como Entero;
+	dinero <- -1;
+	total <- 0;
+	Mientras dinero != 0 hacer
+		Escribir "Ingrese dinero (0-> terminar)";
+		leer dinero;
+		total <- total + dinero;
+		
+	FinMientras
+	Escribir "Total dinero: ", total;
+FinProceso
+___________________________________________________________
+Diseñar un algoritmo que permita calcuñar e imprimir el promedio de peso y edad de los estudiantes de Ingeniera de Sistemas
+
+ANALISIS
+Datos de entrada:
+    peso del estudiante: peso (real)
+    edad del estudiante: edad (real)
+    pregunta para continuar: opc (entero) == (1. Continuar o 2. Salir)
+Datos de salida: 
+    promedio edad: promedio_edad (real)
+    promedio peso: promedio_peso (real)
+Proceso:
+    suma_edad = suma_edad + edad (acumulador)
+    suma_peso = suma_peso + peso (contador)
+    can_estudiantes = can_estudiantes + 1 (contador)
+    promedio_edad = suma_edad/can_estudiantes
+    promedio_peso = suma_peso/can_estudiantes
+
+*** PSEINT ***
+
+Proceso ejercicio_con_while
+	Definir peso, edad, suma_peso, suma_edad Como Real;
+	Definir promedio_peso, promedio_edad Como Real;
+	Definir can_estudiantes, opc Como Entero;
+	opc <- 1;
+	can_estudiantes <- 0;
+	suma_edad <- 0;
+	suma_peso <- 0;
+	Mientras opc = 1 Hacer 
+		can_estudiantes <- can_estudiantes + 1;
+		escribir "Estudiante # ", can_estudiantes;
+		Escribir "Peso: ";
+		Leer peso;
+		Escribir "Edad: ";
+		Leer edad;
+		suma_edad <- suma_edad + edad; //Acumuladores
+		suma_peso <- suma_peso + peso; 
+		Escribir "Desea continuar? [1.Continuar - 2. Salir]";
+		Leer opc;
+	FinMientras
+	promedio_edad <- suma_edad / can_estudiantes;
+	promedio_peso <- suma_peso / can_estudiantes;
+	Escribir "Promedio peso: ", promedio_peso;
+	Escribir "Promedio edad: ", promedio_edad;
+FinProceso
+
+** pasar python
+_________________________________________________
+Diseñar un algortimo que le permite a un supermercado registrar los productos de una venta. al finalizar debera informar cuanto es el valor a pagar, se debe aplicar al vlaor de la venta el IVA
+que corresponde al 19%. tambien se debe imprimir el valor de venta y el valor del IVA- 
+
+ANALISIS
+Datos de entrada: 
+    cantidiad de articulos: cantidad (real)
+    valor unitario del producto: valor_unitario (entero)
+    pregunta continuar: opc (entero)
+Datos de Salida: 
+    total del producto: total_producto (real)
+    valor de la venta: valor_venta(real)
+    valor del iva: valor_iva (real)
+    neto a pagar: neto (real)
+Proceso:
+    total_producto = cantidad * valor_unitario
+    valor_venta = valor_venta + total_producto
+    iva = valor_venta * 0.19
+    neto = valor_venta + iva 
+
+*** pseint ***
+
+Proceso sin_titulo
+	Definir cantidad, total_producto, valor_venta, valor_iva, neto Como Real;
+	Definir valor_unitario, opc Como Entero;
+	opc <- 1;
+	valor_venta <- 0.0;
+	
+	Mientras opc = 1 Hacer
+		Escribir "Cantidad producto: ";
+		Leer cantidad;
+		Escribir "Valor unitario: ", valor_unitario;
+		Leer valor_unitario;
+		total_producto <- cantidad * valor_unitario;
+		valor_venta <- valor_venta + total_producto;
+		Escribir "Desea continuar? [1. Continuar - 2. Salir]";
+		Leer opc;
+	FinMientras
+	iva <- valor_venta * 0.19;
+	neto <- valor_venta + iva;
+	Escribir "El valor a pagar es: " ,valor_venta;
+	Escribir "Valor con iva: ", valor_iva;
+	Escribir "Neto a pagar: ", neto;
+FinProceso
+_______________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
