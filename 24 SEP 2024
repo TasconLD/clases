@@ -1,0 +1,28 @@
+#programa: total_dinero.py
+#proposito: calcular el total de dinero entre todas las personas
+#ejercicio con ciclo For
+
+
+plata_total = 0 #Inicializacion
+cantidad_estudiantes = int(input("Cantidad de estudiantes: "))
+for i in range(1,cantidad_estudiantes + 1):
+    cantidad_dinero = int(input("Plata que tiene (" + str(i) +  ")"))
+    plata_total = plata_total + cantidad_dinero;
+print("Total dinero entre todos: ", plata_total)
+______________________________________________________________________________
+
+
+MIENTRAS: Repite siempre que una condicion sea verdadera
+
+****PSEINT***
+
+Mientras condicion hacer
+  """"
+FinMientras
+  """"
+____________________________________________________
+*******PYTHON*****
+
+While condicion: 
+  """"
+____________________________________________________
