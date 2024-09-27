@@ -60,3 +60,18 @@ print("Total venta: ", valor_venta)
 print("Valor con iva: ", iva)
 print("Neto a pagar: ", neto)
 ________________________________________
+
+USO DEL GLOBAL EN FUNCIONES 
+
+def doble(a):
+    doble = a * 2
+    return doble
+
+def entrada():
+    global a
+    a = int(input("Numero: "))
+    
+#programa principal
+a = 0
+entrada()
+print("doble de " , a , " es : " ,doble(a))
