@@ -33,16 +33,22 @@ print("Total dinero de mujeres: ", total_dinero_mujer)
 print("Promedio dinero mujeres: ", promedio_dinero_mujer)
 
 _______________________________________
+*** PYTHON ***
+Whiles dentro de otros while 
 
 venta_total = 0
 elegir = 1
 while elegir == 1:
   cantidad_articulos = 0
-  while cantidad_articulos <= 0
+  while cantidad_articulos <= 0:
     cant_articulos = float(input("Cantidad articulos: "))
     if cantidad_articulos <= 0
        print("Cantidad no valida, ingrese un valor superior a 0")
+  valor_unitario = 0
+  while valor_unitario <= 0:
     valor_unitario = int(input("Valor unitario: "))
+    if valor_unitario <= 0:
+        print("Entrada no valida, ingrese un valor superior a 0")
     total_producto = cantidad_articulos * valor_unitario
     venta_total = venta_total + total_producto #Acumulador
     print("Total producto: ", total_producto)
