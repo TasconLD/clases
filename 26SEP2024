@@ -1,0 +1,56 @@
+#programa: dinero-while.py
+#proposito: determinar recaudo de dinero
+#fecha: 26/09/2024
+
+cant_personas = 0
+total_dinero = 0
+total_dinero_hombre = 0
+total_dinero_mujer = 0
+cant_hombres = 0
+cant_mujeres = 0
+elegir = 1
+
+while elegir == 1:
+    cant_personas = cant_personas + 1
+    dinero = int(input("Cantidade de dinero que tiene # " + str(cant_personas) + ":"))
+    genero = input("H -> hombre.  M -> mujer")
+    total_dinero = total_dinero + dinero #acumulador
+    if genero.upper() == "H":
+        total_dinero_hombre = total_dinero_hombre + dinero #acumulador
+        cantidad_hombres = cantidad_hombres + 1
+    else:
+        total_dinero_mujer = total_dinero_mujer + dinero
+        cantidad_mujeres = cantidad_mujeres + 1
+    elegir = int(input("¿Desea continuar? 1. Continuar - 2. Terminar"))
+promedio_dinero = total_dinero / cant_personas
+promedio_dinero_hombre = total_dinero_hombre / cantidad_hombres
+promedio_dinero_mujer = total_dinero_mujer / cantidad_mujeres
+print("Total dinero de todos: ", total_dinero)
+print("Promedio de dinero: ", promedio_dinero)
+print("Total dinero de hombres: ", total_dinero_hombre)
+print("Total promedio dinero hombre: ", promedio_dinero_hombre)
+print("Total dinero de mujeres: ", total_dinero_mujer)
+print("Promedio dinero mujeres: ", promedio_dinero_mujer)
+
+_______________________________________
+
+venta_total = 0
+elegir = 1
+while elegir == 1:
+  cantidad_articulos = 0
+  while cantidad_articulos <= 0
+    cant_articulos = float(input("Cantidad articulos: "))
+    if cantidad_articulos <= 0
+       print("Cantidad no valida, ingrese un valor superior a 0")
+    valor_unitario = int(input("Valor unitario: "))
+    total_producto = cantidad_articulos * valor_unitario
+    venta_total = venta_total + total_producto #Acumulador
+    print("Total producto: ", total_producto)
+    print("Total venta: ", venta_total)
+    elegir = int(input("¿Desea continuar? 1. Si - 2. No"))
+iva = venta_total * 0.19
+neto = venta_total + iva
+print("Total venta: ", valor_venta)
+print("Valor con iva: ", iva)
+print("Neto a pagar: ", neto)
+________________________________________
